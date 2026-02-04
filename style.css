@@ -42,7 +42,7 @@ html, body {
   justify-content: flex-start;
   align-items: center;
   max-height: 75vh;
-  margin-top: 5vh;    /* 全体上寄せ */
+  margin-top: 4vh;    /* 全体上寄せ */
 }
 
 /* ルーレット枠 */
