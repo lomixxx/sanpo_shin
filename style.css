@@ -1,19 +1,9 @@
-/* ----------------------------
-   全体設定・背景
----------------------------- */
 html, body {
   height: 100%;
-  min-height: 100vh;
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   box-sizing: border-box;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* 縦中央 */
-  align-items: center;     /* 横中央 */
-  text-align: center;
   overflow-x: hidden;
 
   background-image: linear-gradient(
@@ -25,48 +15,44 @@ html, body {
     rgba(50, 140, 90, 1) 100%
   );
   background-repeat: no-repeat;
-  background-size: cover;       /* 背景フル画面 */
-  background-position: center;  /* 中央に固定 */
+  background-size: cover;
+  background-position: center;
+  position: relative; /* 絶対配置の基準 */
 }
 
-body * {
-  box-sizing: border-box;
-}
-
-/* ----------------------------
-   タイトル
----------------------------- */
+/* タイトル */
 .title {
   font-family: 'Yomogi', sans-serif;
   font-size: 48px;
   font-weight: 900;
   color: rgba(244,240,159,1);
   letter-spacing: 0.18em;
-  margin-bottom: 24px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0 10px 0;
 }
 
-/* ----------------------------
-   ルーレット全体
----------------------------- */
+/* ルーレット全体（固定幅・固定高さ） */
 .roulette {
+  position: absolute;
+  top: 50%;           /* 画面上から50%に設定 */
+  left: 50%;
+  transform: translate(-50%, -60%); /* 上3/4付近に調整 */
+  width: 320px;       /* 固定幅 */
+  height: 180px;      /* 高さ固定 */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between; /* 上下の間隔均等 */
   align-items: center;
-
-  width: 320px;      /* 固定幅 */
-  max-width: 90%;    /* PC画面で広げる */
-  min-width: 280px;  /* スマホで縮小されすぎない */
-  margin: 0 auto 30px auto;
 }
 
-/* 各カラム */
+/* 各カラム（枠の幅固定） */
 .column {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  margin-bottom: 12px;
+  width: 100%;      /* 固定幅に合わせる */
+  height: 80px;     /* 高さ固定 */
 }
 
 /* ラベル */
@@ -74,33 +60,33 @@ body * {
   font-size: 18px;
   font-weight: 700;
   color: #ffffff;
-  opacity: 0.95;
-  letter-spacing: 0.08em;
   font-family: 'Yomogi', sans-serif;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 /* スロット */
 .slot {
-  width: 100%;      /* 親に合わせる */
-  height: 80px;
+  width: 100%;        /* 枠いっぱい */
+  height: 100%;       /* 高さ固定 */
   background: #ffffff;
   border-radius: 16px;
-  padding: 18px;
   font-size: 20px;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 6px 0 rgba(0,0,0,0.15);
+  padding: 0;         /* 文字で可変にならないように */
 }
 
-/* ----------------------------
-   おつげボタン
----------------------------- */
-button {
-  width: 100%;       /* 親幅いっぱい */
-  max-width: 280px;  /* 最大幅指定 */
+/* おつげボタン */
+#startBtn {
+  position: absolute;
+  top: 75%;           /* 上3/4に配置 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;       /* 固定幅 */
+  max-width: 90%;
   font-size: 20px;
   padding: 14px;
   border: none;
@@ -111,23 +97,26 @@ button {
   font-family: 'Yomogi', sans-serif;
   letter-spacing: 0.12em;
   font-weight: 700;
-  margin-top: 20px;
 }
 
-button:active {
+#startBtn:active {
   box-shadow: none;
-  transform: translateY(6px);
+  transform: translate(-50%, -46%);
 }
 
-/* ----------------------------
-   スマホ微調整
----------------------------- */
+/* スマホ微調整 */
 @media screen and (max-width: 480px) {
   .title {
     font-size: 36px;
   }
   .slot {
-    height: 70px;
     font-size: 18px;
+  }
+  .roulette {
+    width: 280px;
+    height: 160px;
+  }
+  #startBtn {
+    width: 240px;
   }
 }
