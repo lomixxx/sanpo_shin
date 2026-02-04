@@ -15,7 +15,7 @@
 
 <script>
   // 簡易認証
-  const PASSWORD = "1623"; // 好きなパスワードに変更
+  const PASSWORD = "1623";
   let input = prompt("パスワードを入力してください:");
   if(input !== PASSWORD){
     document.body.innerHTML = "<h2>パスワードが違います</h2>";
@@ -32,10 +32,9 @@
   }
 </script>
 
-<h1 class="title">さんぽ神</h1>
+<div class="container">
+  <h1 class="title">さんぽ神</h1>
 
-<div class="main-container">
-  <!-- ルーレット部分 -->
   <div class="roulette">
     <div class="column">
       <div class="label">どこで</div>
