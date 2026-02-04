@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>さんぽ神</title>
+
+  <!-- ▼ 手書き丸ゴシック風フォント（さんぽ神タイトル用） -->
+  <!-- Google Fonts：Yomogi -->
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+
+  <!-- ▼ メインスタイル -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ▼ タイトル（さんぽ神） -->
+  <!-- フォント変更はCSSの .title クラスのみで制御 -->
+  <h1 class="title">さんぽ神</h1>
+
+  <div class="roulette">
+    <div class="column">
+      <div class="label">どこで</div>
+      <div id="where" class="slot">？</div>
+    </div>
+
+    <div class="times">×</div>
+
+    <div class="column">
+      <div class="label">なにをする</div>
+      <div id="what" class="slot">？</div>
+    </div>
+  </div>
+
+  <button id="startBtn">おつげ</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
