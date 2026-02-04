@@ -16,21 +16,19 @@ html, body {
   background-position: center;
 
   display: flex;
-  justify-content: center;
-  align-items: flex-start; /* 上寄せ */
+  justify-content: flex-start; /* 上寄せ */
+  align-items: center;
 }
 
-/* 全体コンテナ（高さ75vh） */
 .container {
   width: 100%;
   max-width: 320px;
-  height: 75vh; /* 画面上3/4 */
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* 上寄せ */
   align-items: center;
-  padding-top: 2vh; /* 上余白 */
-  padding-bottom: 2vh; /* 下余白 */
+  margin-top: 2vh; /* 上に寄せる */
+  gap: 3vh;        /* 要素間の余白 */
   box-sizing: border-box;
 }
 
@@ -115,18 +113,4 @@ html, body {
 #startBtn:active {
   box-shadow: none;
   transform: translateY(6px);
-}
-
-/* スマホ微調整 */
-@media screen and (max-width: 480px) {
-  .title {
-    font-size: 34px;
-  }
-  .slot {
-    font-size: 16px;
-    padding: 8px 6px;
-  }
-  #startBtn {
-    width: 280px;
-  }
 }
