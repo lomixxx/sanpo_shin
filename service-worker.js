@@ -1,11 +1,11 @@
-const CACHE_NAME = "sanpokami-cache-v1";
+const CACHE_NAME = "sanpokami-cache-v2";
 const urlsToCache = [
-  "/",
-  "/index.html",
-  "/style.css",
-  "/app.js",
-  "/manifest.json",
-  "/icon.png"
+  "./",
+  "./index.html",
+  "./style.css",
+  "./app.js",
+  "./manifest.json",
+  "./icon.png"
 ];
 
 self.addEventListener("install", event => {
