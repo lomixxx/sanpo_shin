@@ -3,14 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>さんぽ神</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
-  <link rel="apple-touch-icon" href="icon.png">
 </head>
 <body>
 
@@ -22,8 +19,6 @@
     throw new Error("Wrong password");
   }
 
-  // Service Workerを一旦無効化してテスト
-  /*
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
       navigator.serviceWorker.register('./service-worker.js')
@@ -31,7 +26,6 @@
         .catch(err => console.log('ServiceWorker登録失敗:', err));
     });
   }
-  */
 </script>
 
 <h1 class="title">さんぽ神</h1>
