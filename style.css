@@ -20,7 +20,6 @@ html, body {
   justify-content: flex-start;
   align-items: center;
   overflow-x: hidden;
-  position: relative;
 }
 
 /* タイトル */
@@ -31,7 +30,7 @@ html, body {
   color: rgba(244,240,159,1);
   letter-spacing: 0.18em;
   text-align: center;
-  margin-top: 6vh;
+  margin-top: 3vh; /* 上寄せ調整 */
 }
 
 /* ルーレット＋ボタン全体コンテナ */
@@ -40,10 +39,10 @@ html, body {
   max-width: 320px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-start; /* 上寄せ */
   align-items: center;
-  max-height: 60vh;  /* 上3/4以内 */
-  margin-top: 1vh;
+  max-height: 75vh;
+  margin-top: 2vh; /* 全体上寄せ */
 }
 
 /* ルーレット枠 */
@@ -53,14 +52,14 @@ html, body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 12px; /* 枠間の縦間隔 */
-  margin-bottom: 20px; /* ボタンとの間隔 */
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
-/* 各カラム（枠固定） */
+/* 各カラム（枠固定・文字2行対応） */
 .column {
-  width: 100%;          /* 横幅固定 */
-  max-width: 280px;     /* 最大幅 */
+  width: 100%;
+  max-width: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,35 +71,35 @@ html, body {
   font-weight: 700;
   color: #ffffff;
   font-family: 'Yomogi', sans-serif;
-  margin-bottom: 6px; /* 上下の余白 */
+  margin-bottom: 6px;
 }
 
 /* スロット */
 .slot {
   width: 100%;
-  height: 80px;            /* 高さ固定 */
-  min-height: 80px;        /* 高さ固定 */
-  max-height: 80px;        /* 高さ固定 */
+  height: 80px;
+  min-height: 80px;
+  max-height: 80px;
   background: #ffffff;
   border-radius: 16px;
-  font-size: 18px;         /* 少し小さくして2行対応 */
+  font-size: 18px;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 6px 0 rgba(0,0,0,0.15);
-  padding: 0 6px;          /* 横に少し余白 */
+  padding: 0 6px;
   text-align: center;
-  word-break: break-word;  /* 2行目で折り返す */
-  line-height: 1.2em;      /* 文字間隔調整 */
+  word-break: break-word; /* 2行で折り返し */
+  line-height: 1.2em;
 }
 
 /* おつげボタン */
 #startBtn {
   width: 100%;
-  max-width: 280px;   /* 横幅固定 */
+  max-width: 280px;
   font-size: 20px;
-  padding: 14px 0;     /* 上下に余白 */
+  padding: 14px 0;
   border: none;
   border-radius: 999px;
   background: rgba(230,120,125,1);
@@ -123,9 +122,9 @@ html, body {
     font-size: 36px;
   }
   .slot {
-    font-size: 18px;
+    font-size: 16px; /* 文字を小さくして2行でも収まる */
   }
   #startBtn {
-    width: 90%;
+    width: 280px;   /* 固定横幅に変更 */
   }
 }
