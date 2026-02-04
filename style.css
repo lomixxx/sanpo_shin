@@ -17,19 +17,20 @@ html, body {
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* 上寄せ */
 }
 
-/* 全体コンテナ（高さ75vhに収める） */
+/* 全体コンテナ（高さ75vh） */
 .container {
   width: 100%;
   max-width: 320px;
-  height: 75vh;
+  height: 75vh; /* 画面上3/4 */
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* 上下の余白を自動調整 */
+  justify-content: flex-start; /* 上寄せ */
   align-items: center;
-  padding: 5vh 0; /* 上下余白 */
+  padding-top: 5vh; /* 上余白 */
+  padding-bottom: 5vh; /* 下余白 */
   box-sizing: border-box;
 }
 
@@ -41,6 +42,7 @@ html, body {
   color: rgba(244,240,159,1);
   letter-spacing: 0.18em;
   text-align: center;
+  margin-bottom: 3vh; /* タイトルとルーレットの間隔 */
 }
 
 /* ルーレット */
@@ -48,7 +50,7 @@ html, body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   gap: 12px;
 }
@@ -106,6 +108,7 @@ html, body {
   font-family: 'Yomogi', sans-serif;
   letter-spacing: 0.12em;
   font-weight: 700;
+  margin-top: 3vh; /* ルーレットとの間隔 */
 }
 
 /* 押した時 */
