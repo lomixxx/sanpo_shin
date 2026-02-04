@@ -30,7 +30,7 @@ html, body {
   color: rgba(244,240,159,1);
   letter-spacing: 0.18em;
   text-align: center;
-  margin-top: 3vh; /* 上寄せ調整 */
+  margin-top: 5vh; /* 上寄せ調整 */
 }
 
 /* ルーレット＋ボタン全体コンテナ */
@@ -109,6 +109,7 @@ html, body {
   font-family: 'Yomogi', sans-serif;
   letter-spacing: 0.12em;
   font-weight: 700;
+  margin-top: 20px;
 }
 
 /* 押した時 */
