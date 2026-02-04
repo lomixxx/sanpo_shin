@@ -106,7 +106,7 @@ html, body {
   font-family: 'Yomogi', sans-serif;
   letter-spacing: 0.12em;
   font-weight: 700;
-  margin-top: 3vh; /* ルーレットとの間隔 */
+  margin-top: 5vh; /* ルーレットとの間隔 */
 }
 
 /* 押した時 */
@@ -114,3 +114,4 @@ html, body {
   box-shadow: none;
   transform: translateY(6px);
 }
+
