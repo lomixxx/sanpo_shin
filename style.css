@@ -30,7 +30,7 @@ html, body {
   color: rgba(244,240,159,1);
   letter-spacing: 0.18em;
   text-align: center;
-  margin-top: 50vh; /* 上寄せ調整 */
+  margin-top: 20vh; /* 上寄せ調整 */
 }
 
 /* ルーレット＋ボタン全体コンテナ */
