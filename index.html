@@ -8,17 +8,20 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- PWA manifest -->
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
 
 <script>
   // 簡易認証
-  const PASSWORD = "1623"; // 好きなパスワードに変更
+  const PASSWORD = "1623"; // 任意のパスワードに変更
   let input = prompt("パスワードを入力してください:");
   if(input !== PASSWORD){
-    document.body.innerHTML = "<h2>パスワードが違います</h2>";
+    document.body.innerHTML = "<h2 style='text-align:center;margin-top:50vh;color:white;'>パスワードが違います</h2>";
     throw new Error("Wrong password");
   }
 
@@ -34,21 +37,24 @@
 
 <h1 class="title">さんぽ神</h1>
 
-<!-- ルーレット部分（×は削除） -->
-<div class="roulette">
-  <div class="column">
-    <div class="label">どこで</div>
-    <div id="where" class="slot">？</div>
+<!-- ルーレット＋ボタンをまとめたコンテナ -->
+<div class="main-container">
+  <div class="roulette">
+    <div class="column">
+      <div class="label">どこで</div>
+      <div id="where" class="slot">？</div>
+    </div>
+
+    <div class="column">
+      <div class="label">なにをする</div>
+      <div id="what" class="slot">？</div>
+    </div>
   </div>
 
-  <div class="column">
-    <div class="label">なにをする</div>
-    <div id="what" class="slot">？</div>
-  </div>
+  <button id="startBtn">おつげ</button>
 </div>
 
-<button id="startBtn">おつげ</button>
-
 <script src="app.js"></script>
+
 </body>
 </html>
