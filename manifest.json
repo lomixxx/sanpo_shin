@@ -1,7 +1,7 @@
 {
   "name": "さんぽ神",
   "short_name": "SanpoKami",
-  "start_url": "./index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#26b8d2",
   "theme_color": "#50ac6f",
