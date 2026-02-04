@@ -1,11 +1,7 @@
-:root {
-  /* 背景カラーはそのまま */
-}
-
 html, body {
   height: 100%;
   margin: 0;
-  padding: 20px;
+  padding: 0; /* paddingを0に */
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* 指定の背景グラデーション */
@@ -17,12 +13,21 @@ html, body {
     rgba(80, 172, 111, 1) 75%,
     rgba(50, 140, 90, 1) 100%
   );
-
   background-repeat: no-repeat;
   background-size: cover;
+
   text-align: center;
   box-sizing: border-box;
   overflow-x: hidden; /* 横スクロール防止 */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 縦方向の中央揃え */
+  align-items: center;     /* 横方向の中央揃え */
+}
+
+body * {
+  box-sizing: border-box; /* 子要素もはみ出さない */
 }
 
 /* タイトル */
@@ -41,9 +46,9 @@ html, body {
   flex-direction: column; /* 縦に並べる */
   justify-content: center;
   align-items: center;
-  max-width: 100%;
+  width: 90%;
+  max-width: 320px;
   margin: 0 auto 30px auto;
-  box-sizing: border-box;
 }
 
 /* 各カラム */
@@ -51,8 +56,7 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
-  max-width: 280px;
+  width: 100%;  /* カラム幅を親に合わせる */
   margin-bottom: 12px;
 }
 
@@ -80,7 +84,6 @@ html, body {
   justify-content: center;
   align-items: center;
   box-shadow: 0 6px 0 rgba(0,0,0,0.15);
-  box-sizing: border-box;
 }
 
 /* おつげボタン */
