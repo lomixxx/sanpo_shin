@@ -30,19 +30,19 @@ html, body {
   color: rgba(244,240,159,1);
   letter-spacing: 0.18em;
   text-align: center;
-  margin-top: 5vh; /* 上寄せ調整 */
+  margin-top: 10vh; /* タイトルの上余白 */
+  margin-bottom: 3vh; /* タイトルとルーレットの間隔 */
 }
 
 /* ルーレット＋ボタン全体コンテナ */
 .main-container {
   width: 100%;
-  max-width: 320px;   /* 横幅固定 */
+  max-width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   max-height: 75vh;
-  margin-top: 3vh;    /* 全体上寄せ */
 }
 
 /* ルーレット枠 */
@@ -53,7 +53,7 @@ html, body {
   justify-content: flex-start;
   align-items: center;
   gap: 12px;
-  margin-bottom: 30px;
+  margin-bottom: 40px; /* ボタンとの間隔 */
 }
 
 /* 各カラム（枠固定・文字2行対応・横幅固定） */
@@ -77,8 +77,8 @@ html, body {
 /* スロット */
 .slot {
   width: 100%;
-  max-width: 280px;      /* 横幅固定 */
-  height: 80px;          /* 高さ固定 */
+  max-width: 280px;
+  height: 80px;
   min-height: 80px;
   background: #ffffff;
   border-radius: 16px;
@@ -88,17 +88,17 @@ html, body {
   justify-content: center;
   align-items: center;
   box-shadow: 0 6px 0 rgba(0,0,0,0.15);
-  padding: 8px 6px;      /* 縦方向の余白追加 */
+  padding: 8px 6px;
   text-align: center;
-  word-break: break-word; /* 折り返し */
+  word-break: break-word;
   line-height: 1.2em;
-  box-sizing: border-box; /* padding込みで高さ固定 */
+  box-sizing: border-box;
 }
 
 /* おつげボタン */
 #startBtn {
   width: 100%;
-  max-width: 280px;   /* 横幅固定 */
+  max-width: 280px;
   font-size: 20px;
   padding: 14px 0;
   border: none;
@@ -109,7 +109,7 @@ html, body {
   font-family: 'Yomogi', sans-serif;
   letter-spacing: 0.12em;
   font-weight: 700;
-  margin-top: 30px;
+  margin-top: 20px; /* ルーレットとの間隔 */
 }
 
 /* 押した時 */
@@ -124,10 +124,10 @@ html, body {
     font-size: 36px;
   }
   .slot {
-    font-size: 16px;     /* 文字を少し小さくして2行でも収まる */
-    padding: 8px 6px;    /* 縦余白維持 */
+    font-size: 16px;  
+    padding: 8px 6px;  
   }
   #startBtn {
-    width: 280px;        /* 固定横幅 */
+    width: 280px;
   }
 }
