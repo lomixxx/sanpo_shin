@@ -13,6 +13,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<script>
+  // 自分用パスワードを設定
+  const PASSWORD = "1623"; // 好きなパスワードに変更
+
+  // パスワード入力
+  let input = prompt("パスワードを入力してください:");
+  if(input !== PASSWORD){
+    document.body.innerHTML = "<h2>パスワードが違います</h2>";
+    throw new Error("Wrong password");
+  }
+</script>
 
   <!-- ▼ タイトル（さんぽ神） -->
   <!-- フォント変更はCSSの .title クラスのみで制御 -->
