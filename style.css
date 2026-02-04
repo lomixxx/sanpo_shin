@@ -25,10 +25,10 @@ html, body {
   max-width: 320px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* 上寄せ */
-  align-items: center;
-  margin-top: 2vh; /* 上に寄せる */
-  gap: 3vh;        /* 要素間の余白 */
+  justify-content: flex-start;
+  align-items: center; /* 中央寄せ */
+  margin-top: 2vh;
+  gap: 3vh;
   box-sizing: border-box;
 }
 
@@ -40,7 +40,7 @@ html, body {
   color: rgba(244,240,159,1);
   letter-spacing: 0.18em;
   text-align: center;
-  margin-bottom: 2vh; /* タイトルとルーレットの間隔 */
+  margin-bottom: 2vh;
 }
 
 /* ルーレット */
@@ -55,11 +55,10 @@ html, body {
 
 /* 各カラム */
 .column {
-  width: 100%;
-  max-width: 280px;
+  width: 280px;          /* 横幅固定 */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;   /* 中央寄せ */
 }
 
 /* ラベル */
@@ -69,12 +68,12 @@ html, body {
   color: #ffffff;
   font-family: 'Yomogi', sans-serif;
   margin-bottom: 6px;
+  text-align: center;
 }
 
 /* スロット */
 .slot {
-  width: 100%;
-  max-width: 280px;
+  width: 280px;          /* 横幅固定 */
   height: 80px;
   min-height: 80px;
   background: #ffffff;
@@ -94,8 +93,7 @@ html, body {
 
 /* おつげボタン */
 #startBtn {
-  width: 100%;
-  max-width: 280px;
+  width: 280px;           /* 横幅固定 */
   font-size: 20px;
   padding: 14px 0;
   border: none;
@@ -106,7 +104,7 @@ html, body {
   font-family: 'Yomogi', sans-serif;
   letter-spacing: 0.12em;
   font-weight: 700;
-  margin-top: 5vh; /* ルーレットとの間隔 */
+  margin-top: 5vh;       /* ルーレットとの間隔 */
 }
 
 /* 押した時 */
@@ -114,4 +112,3 @@ html, body {
   box-shadow: none;
   transform: translateY(6px);
 }
-
