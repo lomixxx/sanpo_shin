@@ -14,9 +14,10 @@ html, body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* 上寄せ */
+  justify-content: flex-start;  /* 上寄せ */
   align-items: center;
   overflow-x: hidden;
   position: relative;
@@ -30,25 +31,25 @@ html, body {
   color: rgba(244,240,159,1);
   letter-spacing: 0.18em;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 5vh; /* 上から少し余白 */
 }
 
 /* ルーレット親コンテナ */
 .roulette {
-  width: 320px;
-  max-width: 90%;
-  height: 180px;         /* 固定高さ */
+  width: 90%;       /* 横幅可変 */
+  max-width: 320px;
+  height: 180px;    /* 高さ固定 */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-top: 15vh;      /* 画面上からの割合で位置調整 */
+  margin-top: 10vh; /* 画面上から位置を調整 */
 }
 
 /* 各カラム（枠固定） */
 .column {
   width: 100%;
-  height: 80px;           /* 固定高さ */
+  height: 80px;   /* 高さ固定 */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,8 +81,8 @@ html, body {
 
 /* おつげボタン */
 #startBtn {
-  width: 280px;
-  max-width: 90%;
+  width: 80%;
+  max-width: 280px;
   font-size: 20px;
   padding: 14px;
   border: none;
@@ -92,7 +93,7 @@ html, body {
   font-family: 'Yomogi', sans-serif;
   letter-spacing: 0.12em;
   font-weight: 700;
-  margin-top: 10vh;  /* 上3/4あたりに配置 */
+  margin-top: 5vh; /* 枠の下からボタンまでの間隔 */
 }
 
 /* 押した時 */
@@ -107,15 +108,14 @@ html, body {
     font-size: 36px;
   }
   .roulette {
-    width: 280px;
     height: 160px;
-    margin-top: 12vh;
+    margin-top: 8vh;
   }
   .slot {
     font-size: 18px;
   }
   #startBtn {
-    width: 240px;
-    margin-top: 8vh;
+    width: 90%;
+    margin-top: 4vh;
   }
 }
