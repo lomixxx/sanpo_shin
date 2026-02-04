@@ -1,152 +1,105 @@
-/* =========================================
-   カラーパレット
-   ========================================= */
 :root {
-  /* 背景 上 */
-  --color-bg-top: rgba(38, 184, 210, 1);
-
-  /* 背景 下 */
-  --color-bg-bottom: rgba(80, 172, 111, 1);
+  /* 背景カラーはそのまま */
 }
 
-/* =========================================
-   全体設定
-   ※ アプリ全体の基本フォント・背景
-   ========================================= */
 html, body {
   height: 100%;
   margin: 0;
-}
-
-body {
+  padding: 20px;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 
+  /* 指定の背景グラデーション */
   background-image: linear-gradient(
     to bottom,
-    /* 上段：中央が rgba(38, 184, 210, 1) */
     rgba(20, 150, 175, 1) 0%,
     rgba(38, 184, 210, 1) 25%,
     rgba(38, 184, 210, 1) 75%,
-
-    /* 下段：中央が rgba(80, 172, 111, 1) */
     rgba(80, 172, 111, 1) 75%,
-    /*rgba(80, 172, 111, 1) 75%,*/
     rgba(50, 140, 90, 1) 100%
   );
 
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-
-  min-height: 100vh;
+  background-size: cover;
   text-align: center;
-  padding: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden; /* 横スクロール防止 */
 }
 
-/* =========================================
-   タイトル：さんぽ神
-   ※ ここだけ手書き丸ゴシックに変更
-   ========================================= */
+/* タイトル */
 .title {
-  font-family: 'Yomogi', -apple-system, BlinkMacSystemFont, sans-serif; /* 手書き丸ゴシック */
-  margin-bottom: 24px;
-
-  /* タイトルとして強調 */
+  font-family: 'Yomogi', sans-serif;
   font-size: 48px;
   font-weight: 900;
-
-  /* 指定カラー（さんぽ神） */
-  color: rgba(244, 240, 159, 1);
-
-  /* ロゴ感アップ */
+  color: rgba(244,240,159,1);
   letter-spacing: 0.18em;
-
+  margin-bottom: 24px;
 }
 
-/* =========================================
-   ルーレット全体レイアウト
-   ========================================= */
+/* ルーレット全体 */
 .roulette {
   display: flex;
+  flex-direction: column; /* 縦に並べる */
   justify-content: center;
   align-items: center;
-  margin: 30px 0;
+  max-width: 100%;
+  margin: 0 auto 30px auto;
+  box-sizing: border-box;
 }
 
-/* 各カラム（どこで / なにをする） */
+/* 各カラム */
 .column {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 80%;
+  max-width: 280px;
+  margin-bottom: 12px;
 }
 
-/* 見出しラベル */
+/* ラベル */
 .label {
-  margin-bottom: 8px;
-
-  /* 少し大きく */
   font-size: 18px;
-
-  /* タイトルと統一感 */
-  font-family: 'Yomogi', -apple-system, BlinkMacSystemFont, sans-serif;
-
-  /* ほんのり強調 */
   font-weight: 700;
-
   color: #ffffff;
   opacity: 0.95;
-
-  /* 読みやすさアップ */
   letter-spacing: 0.08em;
+  font-family: 'Yomogi', sans-serif;
+  margin-bottom: 8px;
 }
 
-/* =========================================
-   ルーレットの表示スロット
-   ========================================= */
+/* スロット */
 .slot {
+  width: 100%;
+  height: 80px;
   background: #ffffff;
   border-radius: 16px;
   padding: 18px;
-  width: 150px;
-  height: 80px;
   font-size: 20px;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 6px 0 rgba(0,0,0,0.15);
+  box-sizing: border-box;
 }
 
-/* 「×」記号 */
-.times {
-  margin: 0 12px;
-  font-size: 26px;
-  font-weight: bold;
-  color: #ffffff;
-
-  font-family: 'Yomogi', sans-serif;
-  transform: translateY(16px); /* 微調整 */
-}
-
-/* =========================================
-   おつげボタン
-   ========================================= */
+/* おつげボタン */
 button {
-  width: 100%;
+  width: 80%;
   max-width: 280px;
   font-size: 20px;
   padding: 14px;
   border: none;
   border-radius: 999px;
-  background: rgba(230, 120, 125, 1);
+  background: rgba(230,120,125,1);
   color: white;
-  box-shadow: 0 6px 0 rgb(221, 91, 97);
-
-  font-family: 'Yomogi', -apple-system, BlinkMacSystemFont, sans-serif;
+  box-shadow: 0 6px 0 rgb(221,91,97);
+  font-family: 'Yomogi', sans-serif;
   letter-spacing: 0.12em;
   font-weight: 700;
+  margin-top: 20px;
 }
 
-/* 押したときの沈み込み表現 */
 button:active {
   box-shadow: none;
   transform: translateY(6px);

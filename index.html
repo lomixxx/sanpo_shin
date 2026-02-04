@@ -5,46 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>さんぽ神</title>
 
-  <!-- ▼ 手書き丸ゴシック風フォント（さんぽ神タイトル用） -->
-  <!-- Google Fonts：Yomogi -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
 
-  <!-- ▼ メインスタイル -->
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
 </head>
 <body>
-<script>
-  // 自分用パスワードを設定
-  const PASSWORD = "1623"; // 好きなパスワードに変更
 
-  // パスワード入力
+<script>
+  // 簡易認証
+  const PASSWORD = "1623"; // 好きなパスワードに変更
   let input = prompt("パスワードを入力してください:");
   if(input !== PASSWORD){
     document.body.innerHTML = "<h2>パスワードが違います</h2>";
     throw new Error("Wrong password");
   }
+
+  // PWA Service Worker登録
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(reg => console.log('ServiceWorker登録成功:', reg.scope))
+        .catch(err => console.log('ServiceWorker登録失敗:', err));
+    });
+  }
 </script>
 
-  <!-- ▼ タイトル（さんぽ神） -->
-  <!-- フォント変更はCSSの .title クラスのみで制御 -->
-  <h1 class="title">さんぽ神</h1>
+<h1 class="title">さんぽ神</h1>
 
-  <div class="roulette">
-    <div class="column">
-      <div class="label">どこで</div>
-      <div id="where" class="slot">？</div>
-    </div>
-
-    <div class="times">×</div>
-
-    <div class="column">
-      <div class="label">なにをする</div>
-      <div id="what" class="slot">？</div>
-    </div>
+<!-- ルーレットを縦1列にまとめる -->
+<div class="roulette">
+  <div class="column">
+    <div class="label">どこで</div>
+    <div id="where" class="slot">？</div>
   </div>
 
-  <button id="startBtn">おつげ</button>
+  <div class="column">
+    <div class="label">なにをする</div>
+    <div id="what" class="slot">？</div>
+  </div>
+</div>
 
-  <script src="app.js"></script>
+<button id="startBtn">おつげ</button>
+
+<script src="app.js"></script>
 </body>
 </html>
